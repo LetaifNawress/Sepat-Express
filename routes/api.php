@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VendeurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['api'])->group(function () {
+    // Vos routes API ici
+
+    // Exclure le middleware auth:sanctum pour ces routes
+    Route::post('/vendeur/categorie', [VendeurController::class, 'createCategory']);
+    Route::post('/vendeur/produit', [VendeurController::class, 'createProduct']);
+    Route::get('/vendeur/categories', [VendeurController::class, 'showCategories']);
+    Route::get('/vendeur/produits', [VendeurController::class, 'showProducts']);
+});
+
+// Routes nécessitant une authentification
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });

@@ -7,17 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    public function up()
+    use HasFactory;
+    
+    public function users()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id(); // Auto-incremental primary key
-            $table->string('role'); // String column for 'role'
-            $table->timestamps(); // Created_at and updated_at columns
-        });
+        return $this->belongsToMany(User::class);
     }
-
-    public function down()
-    {
-        Schema::dropIfExists('roles');
-}
 }
