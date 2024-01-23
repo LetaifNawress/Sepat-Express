@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\VendeurController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +17,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Routes pour le VendeurController
-Route::post('/vendeur/categorie', [VendeurController::class, 'createCategory']);
-Route::post('/vendeur/produit', [VendeurController::class, 'createProduct']);
-Route::get('/vendeur/categories', [VendeurController::class, 'showCategories']);
-Route::get('/vendeur/produits', [VendeurController::class, 'showProducts']);
+Route::get('/order', function () {
+    return view('client.orderConfirmation');
+});
+
+
+Route::get('/checkout', function () {
+    return view('client.productCheckout');
+});
+
+
+Route::get('/category', function () {
+    return view('client.shopcategory');
+});
+
+
+Route::get('/cart', function () {
+    return view('client.shoppingCart');
+});
+
+
+Route::get('/shop-single', function () {
+    return view('client.shopSingle');
+});
+
+
+
+
+
+
+
