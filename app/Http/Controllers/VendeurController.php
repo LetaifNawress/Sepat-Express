@@ -87,4 +87,17 @@ class VendeurController extends Controller
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
+    
+    public function showProductsByVendeur($vendeurId)
+{
+    try {
+        // Récupérer les produits liés à un vendeur spécifique
+        $produits = Produit::where('vendeur_id', $vendeurId)->get();
+
+        return response()->json(['produits' => $produits], 200);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
+    }
+}
+
 }

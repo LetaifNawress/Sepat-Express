@@ -5,11 +5,11 @@ use App\Http\Controllers\VendeurController;
 use App\Http\Controllers\AdminController;
 
 Route::middleware(['api'])->group(function () {
-    // Vos routes API ici
 
     // Exclure le middleware auth:sanctum pour ces routes
     Route::post('/vendeur/categorie', [VendeurController::class, 'createCategory']);
     Route::post('/vendeur/produit', [VendeurController::class, 'createProduct']);
+    Route::get('/vendeurs/{vendeurId}/products', [VendeurController::class, 'showProductsByVendeur']);
     Route::get('/vendeur/categories', [VendeurController::class, 'showCategories']);
     Route::get('/vendeur/produits', [VendeurController::class, 'showProducts']);
 
@@ -23,7 +23,7 @@ Route::middleware(['api'])->group(function () {
 
     // Users routes
 Route::get('/admin/users', [AdminController::class, 'getUsers'])->name('admin.users.index');
-Route::get('/admin/users/create', [AdminController::class, 'createUser'])->name('admin.users.create');
+Route::post('/admin/users/create', [AdminController::class, 'createUser'])->name('admin.users.create');
 Route::post('/admin/users/store', [AdminController::class, 'storeUser'])->name('admin.users.store');
 Route::get('/admin/users/{user}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 Route::put('/admin/users/{user}', [AdminController::class, 'updateUser'])->name('admin.users.update');
