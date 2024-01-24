@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Produit;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class VendeurController extends Controller
 {
@@ -29,7 +30,7 @@ class VendeurController extends Controller
     public function createProduct(Request $request)
     {
         try {
-            $request->validate([
+            $validator = Validator::make($request->all(), [
                 'Name' => 'required|string|max:255',
                 'Marque' => 'required|string|max:255',
                 'Quantite' => 'required|string|max:255',
@@ -38,7 +39,12 @@ class VendeurController extends Controller
                 'type' => 'required|string|max:255',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 'category_id' => 'required|exists:categories,id',
+                'vendeur_id' => 'required|exists:users,id',
             ]);
+
+            if ($validator->fails()) {
+                return response()->json(['error' => $validator->errors()], 400);
+            }
 
             // Upload de l'image vers le stockage
             $imagePath = $request->file('image')->store('public/images');
@@ -54,6 +60,7 @@ class VendeurController extends Controller
                 'type' => $request->type,
                 'image' => $imagePath,
                 'category_id' => $request->category_id,
+                'vendeur_id' => $request->vendeur_id,
             ]);
 
             return response()->json(['message' => 'Produit créé avec succès', 'produit' => $produit], 201);
@@ -61,7 +68,6 @@ class VendeurController extends Controller
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
-
     public function showCategories()
     {
         try {

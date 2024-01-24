@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Produit extends Model
 {
-    protected $fillable = ['Name', 'Marque', 'Quantite', 'couleur', 'Prix', 'type', 'image', 'reference','categorie_id'];
+    protected $fillable = ['Name', 'Marque', 'Quantite', 'couleur', 'Prix', 'type', 'image', 'reference','categorie_id','vendeur_id' ];
 
     protected static function boot()
     {
@@ -18,8 +18,13 @@ class Produit extends Model
             $produit->reference = Str::uuid();
         });
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'vendeur_id');
+    }
+
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->belongsTo(Categorie::class,'categorie_id');
     }
 }
