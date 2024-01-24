@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Event | Kiaalap - Kiaalap Admin Template</title>
+    <title>Sepat Express </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets2/img/favicon.ico">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -67,13 +67,13 @@
 
 <body>
     <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
     <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                <a href="index.html"><img class="main-logo" src="assets2/img/logo/logo.png" alt="" /></a>
                 <strong><a href="index.html"><img src="assets2/img/logo/logosn.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
@@ -92,7 +92,7 @@
                                 <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
                         </li>
                         <li>
@@ -123,12 +123,12 @@
                                 <li><a title="course Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Library</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>
-                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Add Library Asset</span></a></li>
-                                <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Library Asset</span></a></li>
+                                <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Product</span></a></li>
+                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Add ¨Product</span></a></li>
+                                <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Product</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -279,7 +279,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="assets2/img/contact/1.jpg" alt="">
+                                                                        <img src="assets2/assets2/img/contact/1.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -291,7 +291,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                        <img src="assets2/img/contact/4.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -913,11 +913,11 @@
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#demolibra" href="#">Library <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demolibra" class="collapse dropdown-header-top">
-                                                <li><a href="library-assets.html">Library Assets</a>
+                                                <li><a href="library-assets.html">Product</a>
                                                 </li>
-                                                <li><a href="add-library-assets.html">Add Library Asset</a>
+                                                <li><a href="add-library-assets.html">Add Product</a>
                                                 </li>
-                                                <li><a href="edit-library-assets.html">Edit Library Asset</a>
+                                                <li><a href="edit-library-assets.html">Edit Product</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1045,7 +1045,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
+                            <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="breadcome-heading">
@@ -1059,7 +1059,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Events</span>
+                                            <li><span class="bread-blod">Product</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1070,12 +1070,135 @@
                 </div>
             </div>
         </div>
-        <div class="calender-area mg-b-15">
+        <div class="product-status mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="calender-inner">
-                            <div id='calendar'></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-status-wrap">
+                            <h4>Product List</h4>
+                            <div class="add-product">
+                                <a href="#">Add Product</a>
+                            </div>
+                            <div class="asset-inner">
+                                <table>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Image</th>
+                                        <th>Name of product</th>
+                                        <th>Status</th>
+                                        <th>Subject</th>
+                                        <th>Department</th>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        <th>Setting</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><img src="assets2/img/product/book-1.jpg" alt="" /></td>
+                                        <td>Web Development Book</td>
+                                        <td>
+                                            <button class="pd-setting">Active</button>
+                                        </td>
+                                        <td>Html, Css</td>
+                                        <td>CSE</td>
+                                        <td>Book</td>
+                                        <td>$1500</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><img src="assets2/img/product/book-2.jpg" alt="" /></td>
+                                        <td>Quality Bol pen</td>
+                                        <td>
+                                            <button class="ps-setting">Paused</button>
+                                        </td>
+                                        <td>PHP</td>
+                                        <td>CSE</td>
+                                        <td>CD</td>
+                                        <td>$1700</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><img src="assets2/img/product/book-3.jpg" alt="" /></td>
+                                        <td>Box of pendrive</td>
+                                        <td>
+                                            <button class="ds-setting">Disabled</button>
+                                        </td>
+                                        <td>Java</td>
+                                        <td>CSE</td>
+                                        <td>Book</td>
+                                        <td>$1500</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><img src="assets2/img/product/book-4.jpg" alt="" /></td>
+                                        <td>Quality Bol pen</td>
+                                        <td>
+                                            <button class="pd-setting">Active</button>
+                                        </td>
+                                        <td>PHP</td>
+                                        <td>CSE</td>
+                                        <td>CD</td>
+                                        <td>$1200</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><img src="assets2/img/product/book-1.jpg" alt="" /></td>
+                                        <td>Web Development Book</td>
+                                        <td>
+                                            <button class="pd-setting">Active</button>
+                                        </td>
+                                        <td>Wordpress</td>
+                                        <td>CSE</td>
+                                        <td>Book</td>
+                                        <td>$1800</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td><img src="assets2/img/product/book-2.jpg" alt="" /></td>
+                                        <td>Quality Bol pen</td>
+                                        <td>
+                                            <button class="ps-setting">Paused</button>
+                                        </td>
+                                        <td>Java</td>
+                                        <td>CSE</td>
+                                        <td>CD</td>
+                                        <td>$1000</td>
+                                        <td>
+                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="custom-pagination">
+								<ul class="pagination">
+									<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">Next</a></li>
+								</ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1130,7 +1253,6 @@
 		============================================ -->
     <script src="assets2/js/sparkline/jquery.sparkline.min.js"></script>
     <script src="assets2/js/sparkline/jquery.charts-sparkline.js"></script>
-    <script src="assets2/js/sparkline/sparkline-active.js"></script>
     <!-- calendar JS
 		============================================ -->
     <script src="assets2/js/calendar/moment.min.js"></script>
