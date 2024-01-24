@@ -21,7 +21,7 @@ class AdminController extends Controller
     // Get the list of users with their roles
     public function getUsers()
     {
-        $users = User::with('roles')->get();
+        $users = User::with('role')->get();
 
         return response()->json(['users' => $users]);
     }
