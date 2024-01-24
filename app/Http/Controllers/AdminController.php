@@ -69,72 +69,60 @@ class AdminController extends Controller
     }
 
   // Users CRUD methods
+  
   public function storeUser(Request $request)
   {
       $request->validate([
           'name' => 'required|max:255',
           'email' => 'required|email|unique:users',
           'password' => 'required|min:8',
-          'roles' => 'required|array',
+          'role_id' => 'required|exists:roles,id',
       ]);
-
+  
       try {
           DB::beginTransaction();
-
+  
           $user = User::create([
               'name' => $request->input('name'),
               'email' => $request->input('email'),
               'password' => Hash::make($request->input('password')),
+              'role_id' => $request->input('role_id'),
           ]);
-
-          $user->roles()->attach($request->input('roles'));
-
+  
           DB::commit();
-
+  
           return response()->json(['message' => 'User created successfully']);
       } catch (\Exception $e) {
           DB::rollBack();
-
+  
           return response()->json(['error' => 'Failed to create user', 'details' => $e->getMessage()], 500);
       }
   }
-
+  
   public function updateUser(Request $request, User $user)
   {
       $request->validate([
           'name' => 'required|max:255',
           'email' => ['required', 'email', Rule::unique('users')->ignore($user->id)],
-          'roles' => 'required|array',
+          'role_id' => 'required|exists:roles,id',
       ]);
-
+  
       try {
           DB::beginTransaction();
-
+  
           $user->update([
               'name' => $request->input('name'),
               'email' => $request->input('email'),
+              'role_id' => $request->input('role_id'),
           ]);
-
-          $user->roles()->sync($request->input('roles'));
-
+  
           DB::commit();
-
+  
           return response()->json(['message' => 'User updated successfully']);
       } catch (\Exception $e) {
           DB::rollBack();
-
+  
           return response()->json(['error' => 'Failed to update user', 'details' => $e->getMessage()], 500);
-      }
-  }
-
-  public function destroyUser(User $user)
-  {
-      try {
-          $user->delete();
-
-          return response()->json(['message' => 'User deleted successfully']);
-      } catch (\Exception $e) {
-          return response()->json(['error' => 'Failed to delete user', 'details' => $e->getMessage()], 500);
       }
   }
 }
