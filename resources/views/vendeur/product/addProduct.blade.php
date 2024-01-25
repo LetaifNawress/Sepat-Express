@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Event | Kiaalap - Kiaalap Admin Template</title>
+    <title>Add Library Assets | Kiaalap - Kiaalap Admin Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets2/img/favicon.ico">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -40,6 +40,9 @@
     <!-- educate icon CSS
 		============================================ -->
     <link rel="stylesheet" href="assets2/css/educate-custon-icon.css">
+    <!-- dropzone CSS
+		============================================ -->
+    <link rel="stylesheet" href="assets2/css/dropzone/dropzone.css">
     <!-- morrisjs CSS
 		============================================ -->
     <link rel="stylesheet" href="assets2/css/morrisjs/morris.css">
@@ -54,6 +57,9 @@
 		============================================ -->
     <link rel="stylesheet" href="assets2/css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="assets2/css/calendar/fullcalendar.print.min.css">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="assets2/css/form/all-type-forms.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="assets2/style.css">
@@ -67,13 +73,13 @@
 
 <body>
     <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
     <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                <a href="index.html"><img class="main-logo" src="assets2/img/logo/logo.png" alt="" /></a>
                 <strong><a href="index.html"><img src="assets2/img/logo/logosn.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
@@ -92,7 +98,7 @@
                                 <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
                         </li>
                         <li>
@@ -123,7 +129,7 @@
                                 <li><a title="course Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Library</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>
@@ -224,7 +230,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="assets2/img/logo/logo.png" alt="" /></a>
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -279,7 +285,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="assets2/img/contact/1.jpg" alt="">
+                                                                        <img src="img/contact/1.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -303,7 +309,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="assets2/img/contact/3.jpg" alt="">
+                                                                        <img src="img/contact/3.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -315,7 +321,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="assets2/img/contact/2.jpg" alt="">
+                                                                        <img src="img/contact/2.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -392,7 +398,7 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="assets2/img/product/pro4.jpg" alt="" />
+															<img src="img/product/pro4.jpg" alt="" />
 															<span class="admin-name">Prof.Anderson</span>
 															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
 														</a>
@@ -434,7 +440,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/4.jpg" alt="" />
+                                                                                            <img src="img/contact/4.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -447,7 +453,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/1.jpg" alt="" />
+                                                                                            <img src="img/contact/1.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -460,7 +466,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/2.jpg" alt="" />
+                                                                                            <img src="img/contact/2.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -473,7 +479,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/3.jpg" alt="" />
+                                                                                            <img src="img/contact/3.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -486,7 +492,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/4.jpg" alt="" />
+                                                                                            <img src="img/contact/4.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -499,7 +505,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/1.jpg" alt="" />
+                                                                                            <img src="img/contact/1.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -512,7 +518,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/2.jpg" alt="" />
+                                                                                            <img src="img/contact/2.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -525,7 +531,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/1.jpg" alt="" />
+                                                                                            <img src="img/contact/1.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -538,7 +544,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/2.jpg" alt="" />
+                                                                                            <img src="img/contact/2.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -551,7 +557,7 @@
                                                                                 <a href="#">
                                                                                     <div class="notes-list-flow">
                                                                                         <div class="notes-img">
-                                                                                            <img src="assets2/img/contact/3.jpg" alt="" />
+                                                                                            <img src="img/contact/3.jpg" alt="" />
                                                                                         </div>
                                                                                         <div class="notes-content">
                                                                                             <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
@@ -931,8 +937,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="demo" class="collapse dropdown-header-top">
+                                        <li><a data-toggle="collapse" data-target="#demomi" href="#">Mailbox <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demomi" class="collapse dropdown-header-top">
                                                 <li><a href="mailbox.html">Inbox</a>
                                                 </li>
                                                 <li><a href="mailbox-view.html">View Mail</a>
@@ -1045,7 +1051,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
+                            <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="breadcome-heading">
@@ -1059,7 +1065,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Events</span>
+                                            <li><span class="bread-blod">Add Library Assets</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1070,12 +1076,128 @@
                 </div>
             </div>
         </div>
-        <div class="calender-area mg-b-15">
+        <!-- Single pro tab review Start-->
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="calender-inner">
-                            <div id='calendar'></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-payment-inner-st">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#description">Library Assets</a></li>
+                                <li><a href="#reviews"> Account Information</a></li>
+                                <li><a href="#INFORMATION">Social Information</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div id="dropzone1" class="pro-ad addcoursepro">
+                                                    <form action="/upload" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <input name="nameasset" type="text" class="form-control" placeholder="Name of Asset">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="subject" type="text" class="form-control" placeholder="Subject">
+                                                                </div>
+                                                                <div class="form-group alert-up-pd">
+                                                                    <div class="dz-message needsclick download-custom">
+                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                                                        </p>
+                                                                        <input name="imageico" class="hd-pro-img" type="text" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <input name="department" type="number" class="form-control" placeholder="Department">
+                                                                </div>
+                                                                <div class="form-group res-mg-t-15">
+                                                                    <input name="type" type="text" class="form-control" placeholder="Type">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="price" type="text" class="form-control" placeholder="Price">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="year" type="number" class="form-control" placeholder="Year">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="status" type="text" class="form-control" placeholder="Status">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="payment-adress">
+                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="reviews">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="devit-card-custom">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="number" class="form-control" placeholder="Phone">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" class="form-control" placeholder="Password">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" class="form-control" placeholder="Confirm Password">
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary waves-effect waves-light">Submit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="devit-card-custom">
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Facebook URL">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Twitter URL">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Google Plus">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Linkedin URL">
+															</div>
+															<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1084,9 +1206,9 @@
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+							<p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
                         </div>
                     </div>
                 </div>
@@ -1125,17 +1247,35 @@
     <!-- metisMenu JS
 		============================================ -->
     <script src="assets2/js/metisMenu/metisMenu.min.js"></script>
-    <script src="assets2/js/metisMenu/metisMenu-active.js"></script>
+    <script src="assets2/s/metisMenu/metisMenu-active.js"></script>
     <!-- morrisjs JS
 		============================================ -->
     <script src="assets2/js/sparkline/jquery.sparkline.min.js"></script>
     <script src="assets2/js/sparkline/jquery.charts-sparkline.js"></script>
-    <script src="assets2/js/sparkline/sparkline-active.js"></script>
     <!-- calendar JS
 		============================================ -->
     <script src="assets2/js/calendar/moment.min.js"></script>
     <script src="assets2/js/calendar/fullcalendar.min.js"></script>
     <script src="assets2/js/calendar/fullcalendar-active.js"></script>
+    <!-- maskedinput JS
+		============================================ -->
+    <script src="assets2/js/jquery.maskedinput.min.js"></script>
+    <script src="assets2/js/masking-active.js"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="assets2/js/datepicker/jquery-ui.min.js"></script>
+    <script src="assets2/js/datepicker/datepicker-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="assets2/js/form-validation/jquery.form.min.js"></script>
+    <script src="assets2/js/form-validation/jquery.validate.min.js"></script>
+    <script src="assets2/js/form-validation/form-active.js"></script>
+    <!-- dropzone JS
+		============================================ -->
+    <script src="assets2/js/dropzone/dropzone.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="assets2/js/tab.js"></script>
     <!-- plugins JS
 		============================================ -->
     <script src="assets2/js/plugins.js"></script>

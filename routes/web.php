@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -59,5 +60,29 @@ Route::get('/milestone', function () {
     return view('vendeur.milestone');
 });
 
+Route::get('/List-produit', function (){
+    return view('vendeur.product.listProduct');
+});
 
 
+
+
+Route::get('/add-product' , function(){
+return view("vendeur.product.addProduct");
+
+});
+
+
+
+Route::get('/edit-Product', function(){
+
+return view("vendeur.product.editProduct");
+
+});
+
+
+Route::get('/pdf', function(){
+
+return view("pdfViewer");
+
+});

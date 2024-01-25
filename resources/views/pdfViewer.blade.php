@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Event | Kiaalap - Kiaalap Admin Template</title>
+    <title>Pdf Viewer </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets2/img/favicon.ico">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -67,13 +67,13 @@
 
 <body>
     <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
     <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                <a href="index.html"><img class="main-logo" src="assets2/img/logo/logo.png" alt="" /></a>
                 <strong><a href="index.html"><img src="assets2/img/logo/logosn.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
@@ -92,7 +92,7 @@
                                 <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
                         </li>
                         <li>
@@ -147,7 +147,7 @@
                                 <li><a title="Compose Mail" href="mailbox-compose.html"><span class="mini-sub-pro">Compose Mail</span></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Interface</span></a>
                             <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
                                 <li><a title="Google Map" href="google-map.html"><span class="mini-sub-pro">Google Map</span></a></li>
@@ -291,7 +291,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                        <img src="assets2/img/contact/4.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -1045,7 +1045,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
+                            <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="breadcome-heading">
@@ -1059,7 +1059,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Events</span>
+                                            <li><span class="bread-blod">Pdf Viewer</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1070,13 +1070,17 @@
                 </div>
             </div>
         </div>
-        <div class="calender-area mg-b-15">
+        <div class="pdf-viewer-area mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="calender-inner">
-                            <div id='calendar'></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <div class="pdf-single-pro">
+                            <a class="media" href="pdf/mamunur.pdf"></a>
                         </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     </div>
                 </div>
             </div>
@@ -1086,7 +1090,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                            <p>Copyright © 2018. All rights reserved. Template by <a href="https:///">Colorlib</a></p>
                         </div>
                     </div>
                 </div>
@@ -1130,12 +1134,18 @@
 		============================================ -->
     <script src="assets2/js/sparkline/jquery.sparkline.min.js"></script>
     <script src="assets2/js/sparkline/jquery.charts-sparkline.js"></script>
-    <script src="assets2/js/sparkline/sparkline-active.js"></script>
     <!-- calendar JS
 		============================================ -->
     <script src="assets2/js/calendar/moment.min.js"></script>
     <script src="assets2/js/calendar/fullcalendar.min.js"></script>
     <script src="assets2/js/calendar/fullcalendar-active.js"></script>
+    <!-- pdf JS
+		============================================ -->
+    <script src="assets2/js/pdf/jquery.media.js"></script>
+    <script src="assets2/js/pdf/pdf-active.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="assets2/js/tab.js"></script>
     <!-- plugins JS
 		============================================ -->
     <script src="assets2/js/plugins.js"></script>
