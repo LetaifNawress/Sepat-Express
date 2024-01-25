@@ -1,8 +1,10 @@
 <?php
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VendeurController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 
 Route::middleware(['api'])->group(function () {
 
@@ -22,20 +24,25 @@ Route::middleware(['api'])->group(function () {
     Route::put('/admin/roles/{role}', [AdminController::class, 'updateRole'])->name('admin.roles.update');
 
     // Users routes
-Route::get('/admin/users', [AdminController::class, 'getUsers'])->name('admin.users.index');
-Route::post('/admin/users/create', [AdminController::class, 'createUser'])->name('admin.users.create');
-Route::post('/admin/users/store', [AdminController::class, 'storeUser'])->name('admin.users.store');
-Route::get('/admin/users/{user}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
-Route::put('/admin/users/{user}', [AdminController::class, 'updateUser'])->name('admin.users.update');
-Route::delete('/admin/users/{user}', [AdminController::class, 'destroyUser'])->name('admin.users.destroy');
+    Route::get('/admin/users', [AdminController::class, 'getUsers'])->name('admin.users.index');
+    Route::post('/admin/users/create', [AdminController::class, 'createUser'])->name('admin.users.create');
+    Route::post('/admin/users/store', [AdminController::class, 'storeUser'])->name('admin.users.store');
+    Route::get('/admin/users/{user}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
+    Route::put('/admin/users/{user}', [AdminController::class, 'updateUser'])->name('admin.users.update');
+    Route::delete('/admin/users/{user}', [AdminController::class, 'destroyUser'])->name('admin.users.destroy');
 
     // Placeholder comment: Define the addTester method in your AdminController
     Route::post('/admin/users/add-tester', [AdminController::class, 'addTester'])->name('admin.users.addTester');
-});
 
-// Routes nécessitant une authentification
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
+    // client api
+    Route::get('/products', [ClientController::class, 'showAllProducts']);
+    Route::get('/products/marque/{marque}', [ClientController::class, 'showProductsByMarque']);
+    Route::get('/products/type/{type}', [ClientController::class, 'showProductsByType']);
+
+    // Routes nécessitant une authentification
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('/user', function (Request $request) {
+            return $request->user();
+        });
     });
 });
