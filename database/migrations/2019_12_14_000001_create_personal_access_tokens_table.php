@@ -22,9 +22,14 @@ return new class extends Migration
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
+    
+            // Specify a maximum length for the tokenable_type column
+            $table->index(['tokenable_type'], 'tokenable_type_index', ['length' => ['tokenable_type' => 191]]);
+    
+            // Specify a maximum length for the tokenable_id column
+            $table->index(['tokenable_id'], 'tokenable_id_index', ['length' => ['tokenable_id' => 191]]);
         });
     }
-
     /**
      * Reverse the migrations.
      *
