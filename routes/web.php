@@ -1,6 +1,9 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VendeurController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/vendeur/produit', [VendeurController::class, 'createProduct']);
 
 Route::get('/', function () {
     return view('welcome');

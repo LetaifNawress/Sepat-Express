@@ -1083,9 +1083,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
-                                <li class="active"><a href="#description">Library Assets</a></li>
-                                <li><a href="#reviews"> Account Information</a></li>
-                                <li><a href="#INFORMATION">Social Information</a></li>
+                                <li class="active"><a href="#description">Product</a></li>
+ 
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
                                 <div class="product-tab-list tab-pane fade active in" id="description">
@@ -1093,14 +1092,20 @@
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
-                                                    <form action="/upload" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload">
+
+
+
+
+
+
+                                                    <form action="" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <input name="nameasset" type="text" class="form-control" placeholder="Name of Asset">
+                                                                    <input name="name" type="text" class="form-control" placeholder="Name of Product">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input name="subject" type="text" class="form-control" placeholder="Subject">
+                                                                    <input name="marque " type="text" class="form-control" placeholder="Marque">
                                                                 </div>
                                                                 <div class="form-group alert-up-pd">
                                                                     <div class="dz-message needsclick download-custom">
@@ -1108,26 +1113,27 @@
                                                                         <h2 class="edudropnone">Drop image here or click to upload.</h2>
                                                                         <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
                                                                         </p>
-                                                                        <input name="imageico" class="hd-pro-img" type="text" />
+                                                                        <input name="image" class="hd-pro-img" type="text" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <input name="department" type="number" class="form-control" placeholder="Department">
+                                                                    <input name="quantity" type="number" class="form-control" placeholder="Quantity">
                                                                 </div>
-                                                                <div class="form-group res-mg-t-15">
-                                                                    <input name="type" type="text" class="form-control" placeholder="Type">
-                                                                </div>
+
                                                                 <div class="form-group">
                                                                     <input name="price" type="text" class="form-control" placeholder="Price">
                                                                 </div>
+                                                                
+
+
                                                                 <div class="form-group">
-                                                                    <input name="year" type="number" class="form-control" placeholder="Year">
+                                                                    <textarea name="description" type="text" class="form-control" placeholder="description"></textarea>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <input name="status" type="text" class="form-control" placeholder="Status">
-                                                                </div>
+
+
+
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -1138,6 +1144,12 @@
                                                             </div>
                                                         </div>
                                                     </form>
+
+
+
+
+
+                                                    
                                                 </div>
                                             </div>
                                         </div>

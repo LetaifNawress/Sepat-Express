@@ -34,12 +34,13 @@ class VendeurController extends Controller
                 'Name' => 'required|string|max:255',
                 'Marque' => 'required|string|max:255',
                 'Quantite' => 'required|string|max:255',
-                'couleur' =>'required|string|max:255',
+                'couleur' =>'string|max:255',
                 'Prix' => 'required|integer',
-                'type' => 'required|string|max:255',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'category_id' => 'required|exists:categories,id',
-                'vendeur_id' => 'required|exists:users,id',
+                'type' => 'string|max:255',
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'description' =>'string',
+                //'category_id' => 'exists:categories,id',//add required apres test
+                //'vendeur_id' => 'exists:users,id',//add required apres test
             ]);
 
             if ($validator->fails()) {
@@ -47,20 +48,20 @@ class VendeurController extends Controller
             }
 
             // Upload de l'image vers le stockage
-            $imagePath = $request->file('image')->store('public/images');
-            $imagePath = str_replace('public/', 'storage/', $imagePath);
+           // $imagePath = $request->file('image')->store('public/images');
+           // $imagePath = str_replace('public/', 'storage/', $imagePath);
 
             // Création du produit
             $produit = Produit::create([
                 'Name' => $request->Name,
                 'Marque' => $request->Marque,
-                'Quantite' => $request->Quantite,
+                'Quantite' => $request->Quantity,
                 'couleur' => $request->couleur,
                 'Prix' => $request->Prix,
                 'type' => $request->type,
                 'image' => $imagePath,
-                'category_id' => $request->category_id,
-                'vendeur_id' => $request->vendeur_id,
+                //category_id' => $request->category_id,
+                //'vendeur_id' => $request->vendeur_id,
             ]);
 
             return response()->json(['message' => 'Produit créé avec succès', 'produit' => $produit], 201);
