@@ -40,7 +40,7 @@ public function store(Request $request)
         'couleur' => 'required|string',
         'description' => 'required|string',
         'Prix' => 'required|integer',
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:204800',
         // Ajoutez d'autres règles de validation selon vos besoins
     ]);
 
@@ -48,9 +48,10 @@ public function store(Request $request)
     $requestData = $request->all();
 
     // Manipulation de l'image et stockage
-    $fileName = time() . $request->file('image')->getClientOriginalName();
-    $path = $request->file('image')->storeAs('images', $fileName, 'public');
-    $requestData["image"] = '/storage/' . $path;
+    $image = $request->file('image');
+    $imageName = time() . '.' . $image->getClientOriginalExtension();
+    $imagePath = $image->storeAs('images', $imageName, 'public');
+    $requestData["image"] = '/storage/' . $imagePath;
 
     // Ajouter l'id du vendeur actuellement connecté
     $requestData["vendeur_id"] = 2;

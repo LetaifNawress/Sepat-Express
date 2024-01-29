@@ -1118,14 +1118,7 @@
             <div class="form-group">
                 <input name="Marque" type="text" class="form-control" placeholder="Marque">
             </div>
-            <div class="form-group alert-up-pd">
-                <div class="dz-message needsclick download-custom">
-                    <i class="fa fa-download edudropnone" aria-hidden="true"></i>
-                    <h2 class="edudropnone">Drop image here or click to upload.</h2>
-                    <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span></p>
-                    <input name="image" class="hd-pro-img" type="file" id="image" />
-                </div>
-            </div>
+            
             <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="form-group">
@@ -1133,6 +1126,9 @@
             </div>
         </div>
     </div>
+    <div class="form-group">
+                <input name="image" type="file" class="form-control" placeholder="photo">
+            </div>
             <div class="form-group">
                 <select name="categorie_id" class="form-control">
                     <!-- Options de catégorie dynamiques à récupérer depuis la base de données -->
