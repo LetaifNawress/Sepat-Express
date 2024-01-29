@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Type;
 use App\Models\Produit;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Auth;
 class VendeurController extends Controller
 {
     public function createCategory(Request $request)
@@ -27,78 +28,45 @@ class VendeurController extends Controller
         }
     }
 
-    public function createProduct(Request $request)
-    {
-        try {
-            $validator = Validator::make($request->all(), [
-                'Name' => 'required|string|max:255',
-                'Marque' => 'required|string|max:255',
-                'Quantite' => 'required|string|max:255',
-                'couleur' =>'string|max:255',
-                'Prix' => 'required|integer',
-                'type' => 'string|max:255',
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'description' =>'string',
-                //'category_id' => 'exists:categories,id',//add required apres test
-                //'vendeur_id' => 'exists:users,id',//add required apres test
-            ]);
 
-            if ($validator->fails()) {
-                return response()->json(['error' => $validator->errors()], 400);
-            }
 
-            // Upload de l'image vers le stockage
-           // $imagePath = $request->file('image')->store('public/images');
-           // $imagePath = str_replace('public/', 'storage/', $imagePath);
-
-            // Création du produit
-            $produit = Produit::create([
-                'Name' => $request->Name,
-                'Marque' => $request->Marque,
-                'Quantite' => $request->Quantity,
-                'couleur' => $request->couleur,
-                'Prix' => $request->Prix,
-                'type' => $request->type,
-                'image' => $imagePath,
-                //category_id' => $request->category_id,
-                //'vendeur_id' => $request->vendeur_id,
-            ]);
-
-            return response()->json(['message' => 'Produit créé avec succès', 'produit' => $produit], 201);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-    public function showCategories()
-    {
-        try {
-            $categories = Category::all();
-            return response()->json(['categories' => $categories], 200);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-
-    public function showProducts()
-    {
-        try {
-            $produits = Produit::all();
-            return response()->json(['produits' => $produits], 200);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-    
-    public function showProductsByVendeur($vendeurId)
+public function store(Request $request)
 {
-    try {
-        // Récupérer les produits liés à un vendeur spécifique
-        $produits = Produit::where('vendeur_id', $vendeurId)->get();
+    // Validation des données du formulaire (à adapter selon vos besoins)
+    $request->validate([
+        'Name' => 'required|string',
+        'Marque' => 'required|string',
+        'Quantite' => 'required|string',
+        'couleur' => 'required|string',
+        'description' => 'required|string',
+        'Prix' => 'required|integer',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // Ajoutez d'autres règles de validation selon vos besoins
+    ]);
 
-        return response()->json(['produits' => $produits], 200);
-    } catch (\Exception $e) {
-        return response()->json(['error' => $e->getMessage()], 500);
-    }
+    // Récupérer les données du formulaire
+    $requestData = $request->all();
+
+    // Manipulation de l'image et stockage
+    $fileName = time() . $request->file('image')->getClientOriginalName();
+    $path = $request->file('image')->storeAs('images', $fileName, 'public');
+    $requestData["image"] = '/storage/' . $path;
+
+    // Ajouter l'id du vendeur actuellement connecté
+    $requestData["vendeur_id"] = 2;
+
+    // Créer le produit
+    Produit::create($requestData);
+
+    return redirect('vendeur.product.addProduct')->with('flash_message', 'Produit ajouté avec succès');
+}
+
+public function create()
+{
+    $categories = Category::all();
+    $types = Type::all();
+
+    return view('vendeur.product.addProduct', compact('categories', 'types'));
 }
 
 }

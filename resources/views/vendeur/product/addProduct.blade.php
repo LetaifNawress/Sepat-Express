@@ -1098,52 +1098,83 @@
 
 
 
-                                                    <form action="" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload">
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                                <div class="form-group">
-                                                                    <input name="name" type="text" class="form-control" placeholder="Name of Product">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input name="marque " type="text" class="form-control" placeholder="Marque">
-                                                                </div>
-                                                                <div class="form-group alert-up-pd">
-                                                                    <div class="dz-message needsclick download-custom">
-                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
-                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
-                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
-                                                                        </p>
-                                                                        <input name="image" class="hd-pro-img" type="text" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                                <div class="form-group">
-                                                                    <input name="quantity" type="number" class="form-control" placeholder="Quantity">
-                                                                </div>
+ <form action="{{ route('vendeur.product.store') }}" method="post" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload" enctype="multipart/form-data">
+    
+    @csrf <!-- Ajoutez le jeton CSRF pour la sécurité -->
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <input name="Name" type="text" class="form-control" placeholder="Name of Product">
+            </div>
+            <div class="form-group">
+                <input name="Marque" type="text" class="form-control" placeholder="Marque">
+            </div>
+            <div class="form-group alert-up-pd">
+                <div class="dz-message needsclick download-custom">
+                    <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                    <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                    <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span></p>
+                    <input name="image" class="hd-pro-img" type="file" id="image" />
+                </div>
+            </div>
+            <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <input name="couleur" type="text" class="form-control required-color" placeholder="Couleur">
+            </div>
+        </div>
+    </div>
+            <div class="form-group">
+                <select name="categorie_id" class="form-control">
+                    <!-- Options de catégorie dynamiques à récupérer depuis la base de données -->
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->nomC }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="type_id" class="form-control">
+                    <!-- Options de type dynamiques à récupérer depuis la base de données -->
+                    @foreach($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <input name="Quantite" type="number" class="form-control" placeholder="Quantity">
+            </div>
+            <div class="form-group">
+                <input name="Prix" type="text" class="form-control" placeholder="Price">
+            </div>
+            <div class="form-group">
+                <textarea name="description" type="text" class="form-control" placeholder="description"></textarea>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="payment-adress">
+                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+            </div>
+        </div>
+    </div>
 
-                                                                <div class="form-group">
-                                                                    <input name="price" type="text" class="form-control" placeholder="Price">
-                                                                </div>
-                                                                
+   
+</form>
 
-
-                                                                <div class="form-group">
-                                                                    <textarea name="description" type="text" class="form-control" placeholder="description"></textarea>
-                                                                </div>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
 
 
 
@@ -1227,6 +1258,8 @@
             </div>
         </div>
     </div>
+ 
+
 
     <!-- jquery
 		============================================ -->
