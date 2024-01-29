@@ -13,19 +13,25 @@ class CreateProduitsTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('vendeur_id')->nullable();
             $table->unsignedBigInteger('categorie_id')->nullable();
+            $table->unsignedBigInteger('type')->nullable();
             $table->string('Name');
             $table->string('Marque');
             $table->string('Quantite');
             $table->string('couleur');
+            $table->string('description');
             $table->integer('Prix');
-            $table->string('type');
-            $table->binary('image');
+            $table->integer('nbvente');
+            $table->String('image');
             $table->string('reference')->default(Str::uuid());
+            $table->boolean('is_popular')->default(false);
+
+            
         });
     }
 
     public function down()
     {
         Schema::dropIfExists('produits');
+        
     }
 }
