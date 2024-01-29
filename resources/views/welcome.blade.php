@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sepat Express</title>
-	<link rel="icon" href="img/Fevicon.png" type="image/png">
+	<link rel="icon" href="img/ico3.ico" type="image/png">
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
@@ -15,7 +15,12 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 
   <link rel="stylesheet" href="css/style.css">
-</head>
+
+  
+
+
+      
+
 <body>
   <!--================ Start Header Menu Area =================-->
 	<header class="header_area">
@@ -23,7 +28,7 @@
       <nav class="navbar navbar-expand-lg ">
           
 
-        <a href="index.html"><img src="img/bg3-remove.png" alt=""></a>
+        <a href="index.html"><img src="img/bg77-remove.png" alt=""></a>
 
 
 
@@ -35,7 +40,26 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+            <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Categorie</a>
+                <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link" href="category">A</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">B</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">C</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">D</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">E</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">F</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">G</a></li>
+                  <li class="nav-item"><a class="nav-link" href="category">H</a></li>
+                  <li class="nav-item"><a class="nav-link" href="shop-single">y</a></li>
+                  <li class="nav-item"><a class="nav-link" href="checkout">z</a></li>
+                  <li class="nav-item"><a class="nav-link" href="order">w</a></li>
+                  
+                </ul>
+							</li>
               <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Shop</a>
@@ -90,20 +114,103 @@
               <img class="img-fluid" src="img/home/hero-banner.png" alt="">
             </div>
           </div>
-          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
-            <div class="hero-banner__content">
-              <h4>Shop is fun</h4>
-              <h1>Browse Our Premium Product</h1>
-              <p>Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.</p>
-              <a class="button button-hero" href="#">Browse Now</a>
+
+
+            <div id="customCarousel1" class="carousel slide col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0" data-ride="carousel">
+               <div class="carousel-inner hero-banner__content">
+                  <div class="carousel-item active">
+                     <div class="container ">
+                        
+                                 <h1>
+                                    <span>
+                                    Sale 20% Off
+                                    </span>
+                                    <br>
+                                    On Everything
+                                 </h1>
+                                 <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                        
+                  </div>
+                  <div class="carousel-item ">
+                     <div class="container ">
+
+                                 <h1>
+                                    <span>
+                                    Sale 20% Off
+                                    </span>
+                                    <br>
+                                    On Everything
+                                 </h1>
+                                 <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+
+                  <div class="carousel-item">
+                     <div class="container ">
+
+                                 <h1>
+                                    <span>
+                                    Sale 20% Off
+                                    </span>
+                                    <br>
+                                    On Everything
+                                 </h1>
+                                 <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+               <div class="container">
+                  <ol class="carousel-indicators">
+                  <li data-target="#customCarousel1" data-slide-to="0" class="active" ></li>
+
+                     <li data-target="#customCarousel1" data-slide-to="1"></li>
+                     <li data-target="#customCarousel1" data-slide-to="2"></li>
+                  </ol>
+               </div>
             </div>
-          </div>
+
+
         </div>
       </div>
     </section>
     <!--================ Hero banner start =================-->
 
+
+
+
+
     <!--================ Hero Carousel start =================-->
+
+
+
+
+
+
+
+    
     <section class="section-margin mt-0">
       <div class="owl-carousel owl-theme hero-carousel">
         <div class="hero-carousel__slide">
@@ -130,6 +237,16 @@
       </div>
     </section>
     <!--================ Hero Carousel end =================-->
+
+
+
+
+
+	
+
+
+
+
 
     <!-- ================ trending product section start ================= -->  
     <section class="section-margin calc-60px">
@@ -438,69 +555,7 @@
     </section>
     <!-- ================ Best Selling item  carousel end ================= --> 
 
-    <!-- ================ Blog section start ================= -->  
-    <section class="blog">
-      <div class="container">
-        <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Latest <span class="section-intro__style">News</span></h2>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog1.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog2.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog3.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ================ Blog section end ================= -->  
+    
 
     <!-- ================ Subscribe section start ================= --> 
     <section class="subscribe-position">
@@ -553,6 +608,7 @@
 						<div class="single-footer-widget tp_widgets">
 							<h4 class="footer_title">Quick Links</h4>
 							<ul class="list">
+              
 								<li><a href="#">Home</a></li>
 								<li><a href="#">Shop</a></li>
 								<li><a href="#">Blog</a></li>
@@ -632,5 +688,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="vendors/jquery.ajaxchimp.min.js"></script>
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
+
+  <style>
+  .carousel-indicators li {
+    /* Style par défaut pour les éléments li */
+    background-color: lightgray;
+  }
+
+  .carousel-indicators li.active {
+    /* Style spécifique pour les éléments li qui ont la classe "active" */
+    background-color: blue;
+  }
+</style>
+
 </body>
 </html>
