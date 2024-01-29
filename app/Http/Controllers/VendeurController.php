@@ -59,7 +59,7 @@ public function store(Request $request)
     // Créer le produit
     Produit::create($requestData);
 
-    return redirect('vendeur.product.addProduct')->with('flash_message', 'Produit ajouté avec succès');
+   
 }
 
 public function create()

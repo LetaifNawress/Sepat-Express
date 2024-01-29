@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Produit extends Model
 {
-    protected $fillable = ['Name', 'Marque', 'Quantite', 'couleur', 'Prix', 'type', 'reference','description' ];
+    protected $fillable = ['Name', 'Marque', 'Quantite', 'couleur', 'Prix', 'type', 'reference','description' , 'image'];
 
     protected static function boot()
     {
@@ -16,6 +16,7 @@ class Produit extends Model
 
         static::creating(function ($produit) {
             $produit->reference = Str::uuid();
+            $produit->nbvente = 0;
         });
     }
     public function user()

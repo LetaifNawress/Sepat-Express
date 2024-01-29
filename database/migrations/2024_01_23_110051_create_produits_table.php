@@ -21,7 +21,7 @@ class CreateProduitsTable extends Migration
             $table->string('description');
             $table->integer('Prix');
             $table->integer('nbvente');
-            $table->String('image');
+            $table->String('image')->nullable();
             $table->string('reference')->default(Str::uuid());
             $table->boolean('is_popular')->default(false);
 

@@ -56,4 +56,15 @@ class ClientController extends Controller
         return response()->json(['error' => $e->getMessage()], 500);
     }
 }
+public function showHomePage()
+{
+    try {
+        $popularProducts = Produit::orderByDesc('nbvente')->limit(8)->get();
+        $bestSalaryProduct = Produit::orderByDesc('Prix')->take(8)->get();
+
+        return view('welcome', ['popularProducts' => $popularProducts, 'bestSalaryProduct' => $bestSalaryProduct]);
+    } catch (QueryException $e) {
+        return view('error')->with('error_message', 'Error fetching products: ' . $e->getMessage());
+    }
+}
 }
