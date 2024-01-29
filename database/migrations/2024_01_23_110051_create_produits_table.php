@@ -13,7 +13,7 @@ class CreateProduitsTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('vendeur_id')->nullable();
             $table->unsignedBigInteger('categorie_id')->nullable();
-            $table->unsignedBigInteger('type')->nullable();
+            $table->unsignedBigInteger('type_id')->nullable();
             $table->string('Name');
             $table->string('Marque');
             $table->string('Quantite');
