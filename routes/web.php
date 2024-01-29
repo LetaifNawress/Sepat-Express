@@ -84,7 +84,6 @@ return view("vendeur.product.editProduct");
 
 });
 
-
 Route::get('/pdf', function(){
 
 return view("pdfViewer");
