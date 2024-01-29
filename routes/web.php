@@ -90,3 +90,11 @@ Route::get('/pdf', function(){
 return view("pdfViewer");
 
 });
+//page d'acceuil 
+Route::get('/', [ClientController::class, 'showHomePage'])->name('home');
+Route::get('/show-base64-image', 'ClientController@showBase64Image')->name('show-base64-image');
+
+
+//add produit 
+Route::post('/vendeur/product', [VendeurController::class, 'store'])->name('vendeur.product.store');
+Route::get('/add-product', [VendeurController::class, 'create']);
