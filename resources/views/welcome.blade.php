@@ -252,13 +252,13 @@
     <section class="section-margin calc-60px">
     <div class="container">
         <div class="section-intro pb-60px">
-            <p>Popular Item in the market</p>
-            <h2>Trending <span class="section-intro__style">Product</span></h2>
+            <p>Produit le plus vendu </p>
+            <h2>Produit <span class="section-intro__style">Tendance</span></h2>
         </div>
         <div class="row">
             @foreach ($popularProducts as $product)
             <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="card text-center card-product">
+                <div class="card text-center card-product custom-image-container">
                     <div class="card-product__img">
                     <img class="card-img" src="{{ asset($product->image) }}" alt="{{ $product->Name }}">
                         <ul class="card-product__imgOverlay">
@@ -302,18 +302,19 @@
     <section class="section-margin calc-60px">
     <div class="container">
         <div class="section-intro pb-60px">
-            <p>Popular Item in the market</p>
-            <h2>Best Selling<span class="section-intro__style">Product</span></h2>
+            <p>Produit avec un meilleur prix</p>
+            <h2>Produit <span class="section-intro__style">le plus vendu</span></h2>
         </div>
+
         <div class="row">
             @foreach ($bestSalaryProduct as $product)
                 <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card text-center card-product">
+                    <div class="card text-center card-product custom-image-container">
                         <div class="card-product__img">
                         <img class="card-img" src="{{ asset($product->image) }}" alt="{{ $product->Name }}">
                             <ul class="card-product__imgOverlay">
                                 <li><button><i class="ti-search"></i></button></li>
-                                <li><button><i class="ti-shopping-cart"></i></button></li>
+                                <li><a href="{{ route('shop-single', ['id' => $product->id]) }}"><button><i class="ti-shopping-cart"></i></button></a></li>
                                 <li><button><i class="ti-heart"></i></button></li>
                             </ul>
                         </div>
@@ -462,6 +463,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     /* Style spécifique pour les éléments li qui ont la classe "active" */
     background-color: blue;
   }
+  .custom-image-container {
+            width: 300px; /* Fixe la largeur à 100% du conteneur parent */
+            height: 300px; /* Fixe la hauteur à la valeur souhaitée */
+            overflow: hidden; /* Cache tout dépassement de contenu en dehors du conteneur */
+            padding: 10px; /* Ajoute un padding autour de l'image */
+            box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur/hauteur totale */
+        }
+
+        .custom-image-container img {
+            width: 200px; /* Assurez-vous que l'image occupe 100% de la largeur du conteneur parent */
+            height:200px; /* Assurez-vous que l'image occupe 100% de la hauteur du conteneur parent */
+            object-fit: cover;
+            padding: 50px /* Ajuste la taille de l'image tout en préservant son ratio d'aspect */
+        }
 </style>
 
 </body>

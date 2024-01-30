@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produit;
-
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -69,4 +69,14 @@ public function showHomePage()
 
 
 }
+public function showDetail($id)
+{
+    // Logique pour récupérer les détails du produit en fonction de l'ID
+    $product = Produit::find($id);
+
+    // Retourner la vue avec les détails du produit
+    return view('client.shopSingle', ['product' => $product]);
+}
+
+
 }

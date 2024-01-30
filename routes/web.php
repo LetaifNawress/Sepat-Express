@@ -49,11 +49,16 @@ Route::get('/cart', function () {
     return view('client.shoppingCart');
 });
 
+Route::get('/shop-single/{id?}', function ($id = null) {
+    if (!is_null($id)) {
+        // ID fourni, utilisez le contrôleur pour afficher les détails du produit
+        $clientController = new ClientController();
+        return $clientController->showDetail($id);
+    }
 
-Route::get('/shop-single', function () {
+    // Aucun ID fourni, affichez la vue sans détails spécifiques
     return view('client.shopSingle');
-});
-
+})->name('shop-single');
 
 Route::get('/dash', function () {
     return view('vendeur.dash');
@@ -107,3 +112,7 @@ Route::get('/show-base64-image', 'ClientController@showBase64Image')->name('show
 //add produit 
 Route::post('/vendeur/product', [VendeurController::class, 'store'])->name('vendeur.product.store');
 Route::get('/add-product', [VendeurController::class, 'create']);
+//voir produit selectionner 
+//Route::get('/shop-single/{id}', [ClientController::class, 'showDetail'])->name('shop-single');
+
+
