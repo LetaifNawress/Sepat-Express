@@ -993,12 +993,12 @@
                 </select>
             </div>
             <div class="form-group">
-                <select name="type_id" class="form-control">
-                    <!-- Options de type dynamiques à récupérer depuis la base de données -->
-                    @foreach($types as $type)
-                        <option value="{{ $type->id }}">{{ $type->name }}</option>
-                    @endforeach
-                </select>
+            <label for="type">Type :</label>
+        <select name="type_id" class="form-control">
+            @foreach($types as $type)
+                <option value="{{ $type->id }}">{{ $type->name }}</option>
+            @endforeach
+        </select>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

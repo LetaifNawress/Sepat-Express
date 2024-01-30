@@ -41,6 +41,8 @@ public function store(Request $request)
         'description' => 'required|string',
         'Prix' => 'required|integer',
         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:204800',
+        'categorie_id' => 'required|exists:categories,id',
+        'type_id' => 'required|exists:types,id'
         // Ajoutez d'autres règles de validation selon vos besoins
     ]);
 
