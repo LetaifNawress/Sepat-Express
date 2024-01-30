@@ -74,6 +74,12 @@ Route::get('/List-produit', function (){
 Route::get('/add-product' , function(){
 return view("vendeur.product.addProduct");
 
+
+
+
+
+
+
 });
 
 
@@ -92,6 +98,10 @@ return view("pdfViewer");
 //page d'acceuil 
 Route::get('/', [ClientController::class, 'showHomePage'])->name('home');
 Route::get('/show-base64-image', 'ClientController@showBase64Image')->name('show-base64-image');
+
+
+
+
 
 
 //add produit 

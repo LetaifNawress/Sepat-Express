@@ -62,6 +62,45 @@ public function store(Request $request)
    
 }
 
+//update d'un produit 
+
+public function update(Request $request, $id)
+{
+    // Validation des données du formulaire (à adapter selon vos besoins)
+    $request->validate([
+        'Name' => 'required|string',
+        'Marque' => 'required|string',
+        'Quantite' => 'required|string',
+        'couleur' => 'required|string',
+        'description' => 'required|string',
+        'Prix' => 'required|integer',
+        'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:204800',
+        // Ajoutez d'autres règles de validation selon vos besoins
+    ]);
+
+    // Récupérer les données du formulaire
+    $requestData = $request->all();
+
+    // Vérifier si une nouvelle image a été téléchargée
+    if ($request->hasFile('image')) {
+        // Manipulation de la nouvelle image et mise à jour du chemin d'image
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $imagePath = $image->storeAs('images', $imageName, 'public');
+        $requestData["image"] = '/storage/' . $imagePath;
+    }
+
+    // Mise à jour du produit dans la base de données
+    Produit::findOrFail($id)->update($requestData);
+
+    // Redirection ou autre logique après la mise à jour
+    return redirect()->route('nom.de.votre.route');
+}
+
+
+
+
+
 public function create()
 {
     $categories = Category::all();

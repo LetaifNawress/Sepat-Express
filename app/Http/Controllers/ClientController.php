@@ -66,5 +66,7 @@ public function showHomePage()
     } catch (QueryException $e) {
         return view('error')->with('error_message', 'Error fetching products: ' . $e->getMessage());
     }
+
+
 }
 }
